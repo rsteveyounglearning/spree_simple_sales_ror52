@@ -1,6 +1,6 @@
 module SpreeSimpleSalesRor52
   module Spree
-    module HomecontrollerDecorator
+    module HomeControllerDecorator
       def sale
         @products = ::Spree::Product.joins(:variants_including_master).where('spree_variants.sale_price is not null').distinct
       end
@@ -8,4 +8,4 @@ module SpreeSimpleSalesRor52
   end
 end
 
-Spree::HomeController.prepend SpreeSimpleSalesRor52::Spree::HomecontrollerDecorator
+Spree::HomeController.prepend SpreeSimpleSalesRor52::Spree::HomeControllerDecorator
