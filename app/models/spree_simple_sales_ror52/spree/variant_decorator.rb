@@ -8,3 +8,5 @@ module SpreeSimpleSalesRor52
     end
   end
 end
+
+Spree::Variant.prepend SpreeSimpleSales::Spree::VariantDecorator
